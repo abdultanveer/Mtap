@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     fun clickHandler(view: View) {
         var name = etName.text.toString()
+        throw NullPointerException()
         textView.setText(name)
         Toast.makeText(this,name,Toast.LENGTH_SHORT).show()
     }
