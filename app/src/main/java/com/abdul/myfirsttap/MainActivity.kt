@@ -20,9 +20,20 @@ class MainActivity : AppCompatActivity() {
 
     fun clickHandler(view: View) {
         var name = etName.text.toString()
-        throw NullPointerException()
         textView.setText(name)
+        var d = 30
+        var c = 10+20+d
+        var e = add(10,20)
+        throw NullPointerException()
+
         Toast.makeText(this,name,Toast.LENGTH_SHORT).show()
+    }
+
+    /**
+     * this method adds 2 nos and return result
+     */
+    fun add(fNo: Int, sNo:Int):Int {
+        return fNo + sNo
     }
 
 
