@@ -58,7 +58,7 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/btn_width"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
         android:text="@string/cancel"
@@ -67,6 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etPwd" />
 
     <Spinner
+        android:prompt="@string/spinner_title"
         android:id="@+id/spinner"
         android:entries="@array/languages"
         android:layout_width="match_parent"

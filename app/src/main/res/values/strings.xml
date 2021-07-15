@@ -4,4 +4,5 @@
     <string name="enterpwd">enter password</string>
     <string name="login">login</string>
     <string name="cancel">cancel</string>
+    <string name="spinner_title">select your language</string>
 </resources>
