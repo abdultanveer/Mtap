@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         var d = 30
         var c = 10+20+d
         var e = add(10,20)
-        throw NullPointerException()
+       // throw NullPointerException()
 
         Toast.makeText(this,name,Toast.LENGTH_SHORT).show()
     }
@@ -33,6 +33,10 @@ class MainActivity : AppCompatActivity() {
      * this method adds 2 nos and return result
      */
     fun add(fNo: Int, sNo:Int):Int {
+        for (i in 1..10){
+            println(i)
+        }
+
         return fNo + sNo
     }
 
