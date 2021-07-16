@@ -1,6 +1,7 @@
 package com.abdul.myfirsttap
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -25,12 +26,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clickHandler(view: View) {
+        when(view.id){ //get the id of the view that was clicked
+            R.id.buttonLogin -> { startHome()}
+            R.id.buttonCancel -> { startDialer()}
+        }
+
         //demoExtract()
-        var hIntent: Intent
+       // startHome()
+    }
+
+    private fun startDialer(){
+        var dIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:123456789"))
+        startActivity(dIntent)
+    }
+
+    private fun startHome() {
         var value = etName.text.toString()
 
-        hIntent = Intent(this,HomeActivity::class.java).apply {
-            putExtra("mykey",value)
+        var hIntent: Intent
+        hIntent = Intent(this, HomeActivity::class.java).apply {
+            putExtra("mykey", value)
         }
         startActivity(hIntent)
     }
