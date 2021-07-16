@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.AlarmClock
 import android.util.Log
 import android.view.View
 import android.widget.EditText
@@ -26,14 +27,30 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clickHandler(view: View) {
-        when(view.id){ //get the id of the view that was clicked
-            R.id.buttonLogin -> { startHome()}
-            R.id.buttonCancel -> { startDialer()}
+        when (view.id) { //get the id of the view that was clicked
+            R.id.buttonLogin -> {
+                startHome()
+            }
+            R.id.buttonCancel -> {
+                createAlarm("wake up",4,0)
+            }
+
+            //demoExtract()
+            // startHome()
+        }
+    }
+
+        fun createAlarm(message: String, hour: Int, minutes: Int) {
+            val intent = Intent(AlarmClock.ACTION_SET_ALARM).apply {
+                putExtra(AlarmClock.EXTRA_MESSAGE, message)
+                putExtra(AlarmClock.EXTRA_HOUR, hour)
+                putExtra(AlarmClock.EXTRA_MINUTES, minutes)
+            }
+            if (intent.resolveActivity(packageManager) != null) {
+                startActivity(intent)
+            }
         }
 
-        //demoExtract()
-       // startHome()
-    }
 
     private fun startDialer(){
         var dIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:123456789"))
