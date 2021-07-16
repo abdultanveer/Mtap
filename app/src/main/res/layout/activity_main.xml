@@ -16,7 +16,7 @@
         android:layout_marginTop="30dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
 
     <EditText
         android:id="@+id/etName"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etName" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etPwd" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonCancel"
         android:layout_width="@dimen/btn_width"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"

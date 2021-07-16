@@ -1,4 +1,4 @@
-package com.abdul.myfirsttap;
+package com.abdul.myfirsttap.basics;
 
 public class TestStudent {
 
