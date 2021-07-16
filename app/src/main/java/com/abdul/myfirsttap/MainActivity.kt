@@ -34,10 +34,23 @@ class MainActivity : AppCompatActivity() {
             R.id.buttonCancel -> {
                 createAlarm("wake up",4,0)
             }
+            R.id.btn_google -> {openGoogle()}
+            R.id.btnDial ->{ openDialer()}
 
             //demoExtract()
             // startHome()
         }
+    }
+
+    fun openGoogle(){
+        var gIntent = Intent(Intent.ACTION_VIEW, Uri.parse("http://google.com"))
+        startActivity(gIntent)
+    }
+
+
+    fun openDialer(){
+        var dIntent = Intent(Intent.ACTION_VIEW, Uri.parse("tel:9876543"))
+        startActivity(dIntent)
     }
 
         fun createAlarm(message: String, hour: Int, minutes: Int) {
