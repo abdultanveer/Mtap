@@ -27,7 +27,11 @@ class MainActivity : AppCompatActivity() {
     fun clickHandler(view: View) {
         //demoExtract()
         var hIntent: Intent
-        hIntent = Intent(this,HomeActivity::class.java)
+        var value = etName.text.toString()
+
+        hIntent = Intent(this,HomeActivity::class.java).apply {
+            putExtra("mykey",value)
+        }
         startActivity(hIntent)
     }
 
