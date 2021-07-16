@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     lateinit var etName: EditText //declaration
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        etName = findViewById(R.id.etName) //initialization
+        etName = findViewById(R.id.etName) //initialization -- taking handle edittext
         textView = findViewById(R.id.tvMain)
         Log.i(TAG,"i am in onCreate ")
         var a = 10 //val is final variable
@@ -36,10 +37,27 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.btn_google -> {openGoogle()}
             R.id.btnDial ->{ openDialer()}
+            R.id.btn_Safr -> { safr()}
 
             //demoExtract()
             // startHome()
         }
+    }
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode == 123 && resultCode == RESULT_OK){
+            var tvResult = findViewById<TextView>(R.id.tvResult)
+            tvResult.text = data?.getStringExtra("img")
+        }
+
+    }
+
+
+    private fun safr() {
+        var intent = Intent(this,HomeActivity::class.java)
+        startActivityForResult(intent,123)
     }
 
     fun openGoogle(){
