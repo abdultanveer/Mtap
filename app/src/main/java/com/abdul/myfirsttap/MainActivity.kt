@@ -12,7 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import org.w3c.dom.Text
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnFocusChangeListener {
     lateinit var etName: EditText //declaration
     lateinit var textView: TextView
     var TAG = MainActivity::class.simpleName
@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         etName = findViewById(R.id.etName) //initialization -- taking handle edittext
         textView = findViewById(R.id.tvMain)
+        etName.setOnFocusChangeListener(this)
         Log.i(TAG,"i am in onCreate ")
         var a = 10 //val is final variable
         a =12
@@ -122,6 +123,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         return fNo + sNo
+    }
+
+    override fun onFocusChange(p0: View?, isFocussed: Boolean) {
+       if(isFocussed){
+           Toast.makeText(this,"its focussed",Toast.LENGTH_SHORT).show()
+       }
+        else{
+           Toast.makeText(this,"not focussed",Toast.LENGTH_SHORT).show()
+
+       }
     }
 
 
