@@ -84,6 +84,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun startDialer(){
+        //wa-ne:/1234/message
         var dIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:123456789"))
         startActivity(dIntent)
     }
