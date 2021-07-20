@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
+import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -15,6 +16,7 @@ class HomeActivity : AppCompatActivity() {
     var countries = arrayOf("India","usa","uk")
     lateinit var tvDataReceived: TextView
     lateinit var etHome: EditText
+    lateinit var sendButton: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +40,8 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        sendButton = findViewById(R.id.btnSend)
+        registerForContextMenu(sendButton)
         Log.i(TAG,"onStart--get location")
     }
 
@@ -98,4 +102,19 @@ class HomeActivity : AppCompatActivity() {
         return true
     }
 
+
+    override fun onCreateContextMenu(menu: ContextMenu?,v: View?,menuInfo: ContextMenu.ContextMenuInfo?) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        menuInflater.inflate(R.menu.home_activity_menu,menu)
+    }
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+         super.onContextItemSelected(item)
+        when(item.itemId){
+            R.id.fItem -> {Toast.makeText(this,"first context item",Toast.LENGTH_SHORT).show()}
+            R.id.sItem -> {Toast.makeText(this,"second context item",Toast.LENGTH_SHORT).show()}
+
+        }
+        return true
+    }
 }
