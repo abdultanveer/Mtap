@@ -39,6 +39,7 @@
         android:layout_marginTop="195dp"
         android:onClick="sendHandler"
         android:text="send result"
+        android:background="@drawable/btn_selector"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
