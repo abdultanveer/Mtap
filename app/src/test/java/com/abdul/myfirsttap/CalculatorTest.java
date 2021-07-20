@@ -8,7 +8,7 @@ public class CalculatorTest extends TestCase {
 
     @Test
     public void test_add(){
-        int expected = 40;
+        int expected = 30;
         int actual = Calculator.add(10,20);
         assertEquals(expected,actual);
     }
