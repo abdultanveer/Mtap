@@ -33,8 +33,8 @@ class HomeActivity : AppCompatActivity() {
         var countriesSpinner = findViewById<Spinner>(R.id.spinnerCountries)
         countriesSpinner.adapter = adapter
 
-        /*tvDataReceived = findViewById(R.id.tv_dataReceived) //taking handle on the textview
-        var receivedData =  intent.getStringExtra("mykey")
+        tvDataReceived = findViewById(R.id.tv_dataReceived) //taking handle on the textview
+       /* var receivedData =  intent.getStringExtra("mykey")
         tvDataReceived.text = receivedData*/
     }
 
@@ -73,10 +73,11 @@ class HomeActivity : AppCompatActivity() {
 
     fun sendHandler(view: View) {
         var photoData = etHome.text.toString()
-        var dataIntent = Intent()
+        tvDataReceived.text = photoData
+        /*var dataIntent = Intent()
         dataIntent.putExtra("img",photoData)
         setResult(RESULT_OK,dataIntent)
-        finish()
+        finish()*/
     }
 
     override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {

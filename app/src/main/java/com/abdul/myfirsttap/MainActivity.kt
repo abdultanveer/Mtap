@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity(), View.OnFocusChangeListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        etName = findViewById(R.id.etName) //initialization -- taking handle edittext
+       /* etName = findViewById(R.id.etName) //initialization -- taking handle edittext
         textView = findViewById(R.id.tvMain)
-        etName.setOnFocusChangeListener(this)
+        etName.setOnFocusChangeListener(this)*/
         Log.i(TAG,"i am in onCreate ")
         var a = 10 //val is final variable
         a =12
