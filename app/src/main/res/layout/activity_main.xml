@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_screen"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,7 +13,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="30dp"
-        android:text="TextView"
+        style="@style/my_logo_font_style"
+       android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
 
@@ -81,7 +81,7 @@
 
     <Button
         android:id="@+id/btn_google"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
 
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -118,6 +118,7 @@
 
     <TextView
         android:id="@+id/tvResult"
+        style="@style/second_font_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"

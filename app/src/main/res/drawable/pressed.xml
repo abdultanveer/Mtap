@@ -14,5 +14,11 @@
         android:bottom="1dp"/>
 
     <solid android:color="#abcedf"/>
+    <gradient
+        android:startColor="@color/white"
+        android:endColor="@color/design_default_color_primary"
+        android:angle="45"/>
+    <corners android:radius="8dp" />
+
 
 </shape>

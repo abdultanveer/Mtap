@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="my_logo_font_style">
+        <item name="android:textColor">@android:color/holo_blue_bright</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="second_font_style" parent="my_logo_font_style">
+        <item name="android:textColor">@android:color/holo_green_light</item>
+    </style>
+</resources>
