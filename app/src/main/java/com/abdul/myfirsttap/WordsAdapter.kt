@@ -34,7 +34,7 @@ class WordsAdapter(private val data: Array<String>) : RecyclerView.Adapter<Words
      * inflate the list_item xml so that new data can be written on it and inserted at the bottom
      */
     override fun onCreateViewHolder(viewgroup: ViewGroup, viewType: Int): WordsViewHolder {
-        Log.i(TAG,"onCreateViewHolder")
+        Log.i(TAG,"onCreateViewHolder--no of children currently rv"+viewgroup.childCount)
         var view = LayoutInflater.from(viewgroup.context).inflate(R.layout.list_item_plank,viewgroup,false)
         return WordsViewHolder(view)
     }
@@ -43,7 +43,7 @@ class WordsAdapter(private val data: Array<String>) : RecyclerView.Adapter<Words
      * rahul --handwriting is good so he'll write dish name on the plank
      */
     override fun onBindViewHolder(holder: WordsViewHolder, position: Int) {
-        Log.i(TAG,"onBindViewHolder")
+        Log.i(TAG,"onBindViewHolder--writing "+data[position])
         holder.textview.text = data[position]
     }
 
@@ -51,7 +51,7 @@ class WordsAdapter(private val data: Array<String>) : RecyclerView.Adapter<Words
      * raju -- to keep a tab on no of items in the dataset
      */
     override fun getItemCount(): Int {
-        Log.i(TAG,"getItemCount")
+        Log.i(TAG,"getItemCount-- counting no items remaing--"+data.size)
 
         return data.size
     }
