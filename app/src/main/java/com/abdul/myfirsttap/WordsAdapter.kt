@@ -1,6 +1,5 @@
 package com.abdul.myfirsttap
 
-import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class WordsAdapter(private val data: Array<String>) : RecyclerView.Adapter<WordsAdapter.WordsViewHolder>() {
+class WordsAdapter(private val data: ArrayList<String>) : RecyclerView.Adapter<WordsAdapter.WordsViewHolder>() {
     var TAG = WordsAdapter::class.java.simpleName
 
     /**
