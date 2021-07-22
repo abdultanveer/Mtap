@@ -22,8 +22,28 @@ public class DownloadTask extends AsyncTask<String,Integer,Void> {
     @Override //office boy
     protected Void doInBackground(String... strings) {
         Log.i(TAG,"doinbackground  url ="+strings[0]);
-        mProgressBar.setProgress(50);
+
+        try {
+
+            for (int i = 1; i <100 ; i++) {
+                Thread.sleep(100);
+                publishProgress(i);  //office boy is keeping me posted
+                //i = i+5;
+            }
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         return null;
+    }
+
+
+    @Override
+    protected void onProgressUpdate(Integer... progress) {
+        super.onProgressUpdate(progress);
+        mProgressBar.setProgress(progress[0]);
+
     }
 
     @Override
