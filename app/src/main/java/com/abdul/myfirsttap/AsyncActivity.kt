@@ -24,7 +24,7 @@ class AsyncActivity : AppCompatActivity() {
 
     fun handleDownload(view: View) {
        // simulateDownloadProgress()
-        var downloadTask = DownloadTask()
+        var downloadTask = DownloadTask(progressBar)
         downloadTask.execute("http://downloadUrl.com")
 
     }
