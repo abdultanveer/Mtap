@@ -20,4 +20,6 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="channel_name">abduls channel</string>
+    <string name="channel_description">abduls channel description</string>
 </resources>
