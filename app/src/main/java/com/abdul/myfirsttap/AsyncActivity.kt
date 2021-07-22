@@ -14,6 +14,8 @@ class AsyncActivity : AppCompatActivity() {
        // simulateDownloadProgress()
     }
 
+
+
     private fun simulateDownloadProgress() {
         for(i in 1..100) {
 
