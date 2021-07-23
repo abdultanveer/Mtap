@@ -17,6 +17,7 @@ class DunzoService : Service() {
          super.onStartCommand(intent, flags, startId)
         var data = intent?.getStringExtra("mykey")
         Toast.makeText(this,data,Toast.LENGTH_SHORT).show()
+        stopSelf()
         return START_STICKY
     }
 

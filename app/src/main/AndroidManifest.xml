@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyfirstTap">
         <service android:name=".DunzoService"></service>
-
+        <service android:name=".LocalService"/>
         <activity android:name=".ServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
