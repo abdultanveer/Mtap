@@ -3,7 +3,7 @@
     package="com.abdul.myfirsttap">
 
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <application
         android:allowBackup="true"
@@ -12,32 +12,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyfirstTap">
-        <activity android:name=".AsyncActivity">
+        <service android:name=".MyService"></service>
+
+        <activity android:name=".ServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RecyclerviewActivity"></activity>
+
+        <activity android:name=".AsyncActivity">
+
+        </activity>
+        <activity android:name=".RecyclerviewActivity" />
         <activity
             android:name=".BottomNavActivity"
-            android:label="@string/title_activity_bottom_nav"></activity>
+            android:label="@string/title_activity_bottom_nav" />
         <activity
             android:name=".NavDrawerActivity"
             android:label="@string/title_activity_nav_drawer"
             android:theme="@style/Theme.MyfirstTap.NoActionBar" />
-        <activity android:name=".HomeActivity">
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".MainActivity" />
 
-        </activity>
-        <activity android:name=".MainActivity"></activity>
-
-        <receiver android:name=".SmsReceiver">
+       <!-- <receiver android:name=".SmsReceiver">
             <intent-filter>
-                <action android:name="android.provider.Telephony.SMS_RECEIVED"></action>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
-        </receiver>
-
+        </receiver>-->
     </application>
 
 </manifest>
