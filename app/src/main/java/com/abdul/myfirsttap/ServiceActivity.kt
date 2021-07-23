@@ -15,11 +15,12 @@ class ServiceActivity : AppCompatActivity() {
 
         when(view.id){
             R.id.btnStart -> {
-                var serviceIntent = Intent(this,MyService::class.java)
+                var serviceIntent = Intent(this,DunzoService::class.java)
+                serviceIntent.putExtra("mykey","my value")
                 startService(serviceIntent)
             }
             R.id.btnStop ->{
-                var serviceIntent = Intent(this,MyService::class.java)
+                var serviceIntent = Intent(this,DunzoService::class.java)
                 stopService(serviceIntent)
             }
         }
